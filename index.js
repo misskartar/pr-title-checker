@@ -22,12 +22,12 @@ async function run() {
       return;
     }
     let { CHECKS, LABEL, MESSAGES } = JSON.parse(config);
-    LABEL.name = LABEL.name || "title needs formatting";
+    LABEL.name = LABEL.name || "PR Title Needs Formatting";
     LABEL.color = LABEL.color || "eee";
     CHECKS.ignoreLabels = CHECKS.ignoreLabels || [];
     MESSAGES = MESSAGES || {};
-    MESSAGES.success = MESSAGES.success || "All OK";
-    MESSAGES.failure = MESSAGES.failure || "Failing CI test";
+    MESSAGES.success = MESSAGES.success || "PR Title OK";
+    MESSAGES.failure = MESSAGES.failure || "Failing PR Title Check";
     MESSAGES.notice = MESSAGES.notice || "";
 
     for (let i = 0; i < labels.length; i++) {
